@@ -35,7 +35,7 @@ public class Main {
 			}
 			counter++;
 		}
-		System.out.println("Zgadłeś w " + counter + " próbach.");
+		System.out.println("Udało Ci się zgadnąć w: " + counter + " próbach.");
 	}
 
 }
