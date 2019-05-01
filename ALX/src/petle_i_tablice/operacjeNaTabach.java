@@ -11,21 +11,29 @@ public class operacjeNaTabach {
 
 	public static void main(String[] args) {
 		System.out.println("Start.");
+		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Jak duża ma być tablica?");
+		
 		int length = sc.nextInt();
 		int[] tab = new int[length];
 		int x;
+		// <tab>
+		System.out.println("Jak duża ma być tablica?");
 		System.out.println("Podaj " + length + " wartości: ");
 		for (int i = 0; i < tab.length; i++) {
 			tab[i] = sc.nextInt();
 		}
 		System.out.println(Arrays.toString(tab));
+		//</tab>
 
 		System.out.println("*Suma: " + suma(tab));
+		
 		System.out.println("*Średnia: " + srednia(tab));
+		
 		System.out.println("*max: " + max(tab));
+		
 		System.out.println("*max - min: " + minMinusMax(tab));
+		
 		System.out.print("-Wypisz elementy większe od: ");
 		x = sc.nextInt();
 		wypiszWieksze(tab, x);
