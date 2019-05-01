@@ -10,15 +10,16 @@ public class metody {
 		/*
 		 * 1 stopa = 0,3048 metra
 		 */
-		// System.out.println("to : " + metersToFoots() + " stopa/y.");
-		// System.out.printf("%.2f", farToCelc());
-		// System.out.println();
-		// System.out.printf("%.2f", celcToFar());
+		
+		System.out.println("to : " + metersToFoots() + " stopa/y.");
+		System.out.printf("%.2f", farToCelc());
+		System.out.println();
+		System.out.printf("%.2f", celcToFar());
 		dayOfMonth();
 	}
 
 	public static double metersToFoots() {
-		System.out.println("Metry na stopy, podaje m: ");
+		System.out.println("Metry na stopy, podaj ile chcesz metrow: ");
 		double meters = sc.nextDouble();
 		double res = meters * (0.3048);
 		return res;
@@ -43,7 +44,7 @@ public class metody {
 	public static void dayOfMonth() {
 		// dla podanego miesiaca zwraca ilos dni
 		// 1 (styczen) = 31
-		// Każdy rok podzielny przez 4 jest rokiem przestępnym. luty = 30/28
+		// Każdy rok podzielny przez 4 jest rokiem przestępnym. luty = 29/28
 		String[] days = { "Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien",
 				"Pazdziernik", "Listopad", "Grudzien" };
 		int i = 0;
@@ -68,7 +69,7 @@ public class metody {
 					howManyDays = 28;
 				}
 			}
-			if (i > 7) {
+			if (i >= 8) {
 				if (i % 2 == 0) {
 					howManyDays = 31;
 				} else if (i % 2 != 0) {
@@ -76,7 +77,7 @@ public class metody {
 				}
 			}
 
-			System.out.println(days[i - 1] + " ma " + howManyDays + " dni.");
+			System.out.println("\n" + days[i - 1] + " ma " + howManyDays + " dni.");
 			sum += howManyDays;
 
 		}
