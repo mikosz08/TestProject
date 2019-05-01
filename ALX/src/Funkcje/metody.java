@@ -75,6 +75,7 @@ public class metody {
 				} else if (i % 2 != 0) {
 					howManyDays = 30;
 				}
+				
 			}
 
 			System.out.println("\n" + days[i - 1] + " ma " + howManyDays + " dni.");
