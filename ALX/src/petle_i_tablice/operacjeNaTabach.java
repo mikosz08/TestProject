@@ -11,29 +11,30 @@ public class operacjeNaTabach {
 
 	public static void main(String[] args) {
 		System.out.println("Start.");
-		
+
 		Scanner sc = new Scanner(System.in);
-		
-		int length = sc.nextInt();
-		int[] tab = new int[length];
-		int x;
+
 		// <tab>
 		System.out.println("Jak duża ma być tablica?");
+		int length = sc.nextInt();
 		System.out.println("Podaj " + length + " wartości: ");
+
+		int[] tab = new int[length];
+		int x;
 		for (int i = 0; i < tab.length; i++) {
 			tab[i] = sc.nextInt();
 		}
 		System.out.println(Arrays.toString(tab));
-		//</tab>
+		// </tab>
 
 		System.out.println("*Suma: " + suma(tab));
-		
+
 		System.out.println("*Średnia: " + srednia(tab));
-		
+
 		System.out.println("*max: " + max(tab));
-		
+
 		System.out.println("*max - min: " + minMinusMax(tab));
-		
+
 		System.out.print("-Wypisz elementy większe od: ");
 		x = sc.nextInt();
 		wypiszWieksze(tab, x);
@@ -70,6 +71,7 @@ public class operacjeNaTabach {
 
 		System.out.println("Pierwszym ellementem powtarzającym się jest: " + znajdzWspolny(tab, t2));
 		System.out.println("Wszystkimi elementami powtarzającymi się są: " + wszystkieWspolne(tab, t2));
+
 		System.out.println("End.");
 	}
 
@@ -140,7 +142,7 @@ public class operacjeNaTabach {
 				System.out.println(tab[i]);
 				res++;
 			}
-			if(res == 0) {
+			if (res == 0) {
 				System.out.println("nie ma");
 				break;
 			}
